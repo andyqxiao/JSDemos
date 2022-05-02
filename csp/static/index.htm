@@ -1,0 +1,27 @@
+<html>
+<head>
+
+<!--<meta http-equiv="content-security-policy" content="connect-src localhost:8080">-->
+
+<script defer type="text/javascript" src="main.js" />
+</script>
+</head>
+</head>
+<body>
+    This is CSP test
+    <br/>
+    <input type="button" value="Fetch data from the same origin" onclick="fetchDataFromSameOrigin()"/>
+    <br/>
+    <input type="button" value="Fetch data from cross origin" onclick="fetchDataFromCrossOrigin()"/>
+        <br/>
+    <input type="button" value="Fetch data - allow one" onclick="fetchDataAllowOne()"/>
+        <br/>
+    <input type="button" value="Fetch data - allow all" onclick="fetchDataAllowAll()"/>
+        <br/>
+    <input type="button" value="Fetch data - allow none" onclick="fetchDataAllowNone()"/>
+    <br/>
+    <input type="button" value="Fetch data through non-sample request" onclick="fetchDataThroughNonSampleRequest()"/>
+    <br/>
+    <input type="button" value="Fetch data from fake" onclick="fetchDataFromFake()"/>
+</body>
+</html>
