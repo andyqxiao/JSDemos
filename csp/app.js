@@ -9,7 +9,7 @@ let webExpress = express();
 webExpress.use('/static', express.static('static', {
     setHeaders: function (res, path, stat) {
         //res.set("Content-Security-Policy", "connect-src localhost");
-        res.set("Content-Security-Policy-Report-Only", "connect-src localhost; report-uri http://localhost:8088/report");
+        //res.set("Content-Security-Policy-Report-Only", "connect-src localhost; report-uri http://localhost:8088/report");
     }
 }));
 webExpress.get("/same-origin", (req,  resp) => {
@@ -32,7 +32,9 @@ let apiExpress = express();
 // Allow only one origin
 apiExpress.get("/allow-one", (req,  resp) => {
     console.log("GET: /allow-one");
-    resp.set("Access-Control-Allow-Origin", "http://localhost:8080");
+    // This will not block the request from the same origin
+    //resp.set("Access-Control-Allow-Origin", "null");
+    //resp.set("Access-Control-Allow-Origin", "http://localhost:8080");
     resp.send("Hello, express, Allow one");
 });
 apiExpress.put("/allow-one", (req,  resp) => {
