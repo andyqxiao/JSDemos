@@ -1,7 +1,7 @@
 //main.js
 
-function fetchDataFromSameOrigin() {
-    const url = "http://localhost:8080/same-origin";
+function sop() {
+    const url = "http://localhost:8080/sop";
     
     fetch(url)
     .then(response => response.text())
@@ -11,8 +11,8 @@ function fetchDataFromSameOrigin() {
     });
 }
 
-function fetchDataFromCrossOrigin() {
-    const url = "http://localhost:8081/allow-one";
+function corsSimple() {
+    const url = "http://localhost:8081/cors";
     
     fetch(url)
     .then(response => response.text())
@@ -22,41 +22,8 @@ function fetchDataFromCrossOrigin() {
     });
 }
 
-function fetchDataAllowOne() {
-    const url = "http://localhost:8081/allow-one";
-    
-    fetch(url)
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
-
-function fetchDataAllowAll() {
-    const url = "http://localhost:8081/allow-all";
-    
-    fetch(url)
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
-
-function fetchDataAllowNone() {
-    const url = "http://localhost:8081/allow-none";
-    
-    fetch(url)
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
-
-function fetchDataThroughNonSampleRequest() {
-    const url = "http://localhost:8081/allow-one";
+function corsComplex() {
+    const url = "http://localhost:8081/cors";
     
     fetch(url, {
         //body: formData,
@@ -67,33 +34,35 @@ function fetchDataThroughNonSampleRequest() {
     })
     .then(response => response.text())
     .then(result => {
-        console.log('Non-sample request:', result);
+        console.log(result);
     })
     .catch(error => {
         console.error('Error:', error);
     });
 }
 
-function fetchDataFromFake() {
-    const url = "http://localhost:8081/allow-fake";
+function corsBlock() {
+    const url = "http://localhost:8081/cors/block";
+    
+    fetch(url)
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+function corsCache() {
+    const url = "http://localhost:8081/cors/cache";
     
     fetch(url, {
-        //body: formData,
         method: 'PUT'
     })
     .then(response => response.text())
     .then(result => {
-        console.log('Non-sample request:', result);
+        console.log(result);
     })
     .catch(error => {
         console.error('Error:', error);
     });
 }
-
-//fetchDataAllowOne();
-//fetchDataAllowAll();
-//fetchDataAllowNone();
-
-//fetchDataFromSameOrigin();
-//fetchDataFromCrossOrigin();
-//fetchDataThroughNonSampleRequest();

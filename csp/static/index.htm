@@ -10,18 +10,14 @@
 <body>
     This is CSP test
     <br/>
-    <input type="button" value="Fetch data from the same origin" onclick="fetchDataFromSameOrigin()"/>
+    <input type="button" value="SOP (Same Origin Policy)" onclick="sop()"/>
     <br/>
-    <input type="button" value="Fetch data from cross origin" onclick="fetchDataFromCrossOrigin()"/>
-        <br/>
-    <input type="button" value="Fetch data - allow one" onclick="fetchDataAllowOne()"/>
-        <br/>
-    <input type="button" value="Fetch data - allow all" onclick="fetchDataAllowAll()"/>
-        <br/>
-    <input type="button" value="Fetch data - allow none" onclick="fetchDataAllowNone()"/>
+    <input type="button" value="CORS (Cross Origin Resource Share) - Simple" onclick="corsSimple()"/>
     <br/>
-    <input type="button" value="Fetch data through non-sample request" onclick="fetchDataThroughNonSampleRequest()"/>
+    <input type="button" value="CORS (Cross Origin Resource Share) - Complex" onclick="corsComplex()"/>
     <br/>
-    <input type="button" value="Fetch data from fake" onclick="fetchDataFromFake()"/>
+    <input type="button" value="CORS (Cross Origin Resource Share) - Block" onclick="corsBlock()"/>
+    <br/>
+    <input type="button" value="CORS (Cross Origin Resource Share) - Cache" onclick="corsCache()"/>
 </body>
 </html>

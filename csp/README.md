@@ -1,8 +1,8 @@
-### CSP Demos
+# CSP Demos
 
-### Content
+## Content
 
-#### SOP (Same Origin Policy)
+### SOP (Same Origin Policy) - Deprecated
 
 SOP
 
@@ -30,9 +30,19 @@ CSP Report
 
 * The "Content-Security-Policy-Report-Only" header does not block the request, it only report the request to the report server if it does not follow the policy
 
+## Reference
 
-### Links
+### CORS
 
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
-* https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work
-* https://expressjs.com/en/4x/api.html
+Cross-Origin Resource Sharing
+
+* [Cross-Origin Resource Sharing](https://www.w3.org/TR/2020/SPSD-cors-20200602/)
+* [Mozilla: CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+What are simple requests?
+
+* [Simple Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests)
+
+How does access control allow origin header work?
+
+* [How does access control allow origin header work?](https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work)
