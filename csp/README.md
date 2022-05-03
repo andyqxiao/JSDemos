@@ -38,6 +38,8 @@ Cross-Origin Resource Sharing
 
 * [Cross-Origin Resource Sharing](https://www.w3.org/TR/2020/SPSD-cors-20200602/)
 * [Mozilla: CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+* [CORS in action](https://livebook.manning.com/book/cors-in-action)
+* [Cross-Origin Resource Sharing and Why We Need Preflight Requests](https://www.baeldung.com/cs/cors-preflight-requests)
 
 What are simple requests?
 
@@ -46,3 +48,4 @@ What are simple requests?
 How does access control allow origin header work?
 
 * [How does access control allow origin header work?](https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work)
+* [What is the motivation behind the introduction of preflight CORS requests?](https://stackoverflow.com/questions/15381105/what-is-the-motivation-behind-the-introduction-of-preflight-cors-requests)
