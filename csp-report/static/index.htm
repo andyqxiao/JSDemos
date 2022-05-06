@@ -1,0 +1,24 @@
+<html>
+<head>
+
+<!--<meta http-equiv="content-security-policy" content="connect-src localhost:8080">-->
+
+<script type="text/javascript" />
+    function request() {
+        const port =  Math.floor(Math.random() * 7) + 8081;
+        fetch("http://localhost:" + port + "/api")
+        .then(response => response.text())
+        .then(data => console.log(data))
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
+</head>
+</head>
+<body>
+    This is a magic website, which will request many endpoints.
+    <br />
+    <input type="button" value="Please click me as many times as you can" onclick="request()"/>
+</body>
+</html>

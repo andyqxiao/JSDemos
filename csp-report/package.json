@@ -1,0 +1,24 @@
+{
+  "name": "CSP demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev-web": "nodemon web.js",
+    "dev-api": "nodemon api.js",
+    "dev-report": "nodemon report.js",
+    "start-web": "node web.js",
+    "start-api": "node api.js",
+    "start-report": "node report.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andy Q XIAO",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
